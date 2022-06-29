@@ -1,5 +1,5 @@
 # Features
-- Replace broken items by others in your inventory.
+- Replace broken items in your hotbar with a spare from your inventory
 
 # Default Raft Features
 - Z sorts your inventory

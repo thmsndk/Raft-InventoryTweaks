@@ -17,14 +17,14 @@ namespace thmsn.InventoryTweaks.Patches
 
         static void Prefix(PlayerInventory __instance, Slot slot, int stacksToRemove, out HotBarSlotAndItemInstance __state)
         {
-            Debug.Log("RemoveStacksFromSlot");
+            //Debug.Log("RemoveStacksFromSlot");
             __state = new HotBarSlotAndItemInstance
             {
                 HotBarSlot = slot,
                 ItemInstance = slot.itemInstance
             };
             //csrun RAPI.GetLocalPlayer().Inventory.GetSelectedHotbarSlot().itemInstance.Uses = 1;
-            Debug.Log($"{slot.itemInstance.UniqueName} uses {slot.itemInstance.Uses} / {slot.itemInstance.BaseItemMaxUses}");
+            //Debug.Log($"{slot.itemInstance.UniqueName} uses {slot.itemInstance.Uses} / {slot.itemInstance.BaseItemMaxUses}");
         }
 
         static void Postfix(PlayerInventory __instance, int stacksToRemove, HotBarSlotAndItemInstance __state, bool __result)
@@ -36,11 +36,10 @@ namespace thmsn.InventoryTweaks.Patches
                 var selectedHotBarSlot = __state.HotBarSlot;
                 var itemInstance = __state.ItemInstance;
                 
-                foreach (Slot slot in player.Inventory.allSlots) // TODO: does allSlots contain
+                foreach (Slot slot in player.Inventory.allSlots)
                 {
                     if (slot.itemInstance != null && slot.itemInstance.UniqueName == itemInstance.UniqueName && slot != selectedHotBarSlot)
                     {
-
                         selectedHotBarSlot.SetItem(slot.itemInstance); // Assign the item from the slot to the hotbar;
                         slot.Reset(); // Clear the slot of the item;
                         break;
