@@ -37,8 +37,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FixMoreStoragesExtensions.cs" />
+    <Compile Include="UIHelper.cs" />
     <Compile Include="InventoryTweaks.cs" />
     <Compile Include="Patches\Patch_PlayerInventory_RemoveStacksFromSlot_.cs" />
+    <Compile Include="TotalItemCountOnRaftTooltip.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

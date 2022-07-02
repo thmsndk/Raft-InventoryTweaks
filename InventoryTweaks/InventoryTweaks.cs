@@ -6,7 +6,7 @@ namespace thmsn.InventoryTweaks
 {
     public class InventoryTweaksMod : Mod
     {
-        public static string ModNamePrefix = "<color=black>Inventory</color><color=green>Tweaks</color>";
+        public static string ModNamePrefix = "<color=white>Inventory</color><color=green>Tweaks</color>";
         private const string harmonyId = "com.thmsn.inventory-tweaks";
         Harmony harmony;
         public void Start()
@@ -22,6 +22,4 @@ namespace thmsn.InventoryTweaks
             Debug.Log(ModNamePrefix + " has been unloaded!");
         }
     }
-
-    
 }
