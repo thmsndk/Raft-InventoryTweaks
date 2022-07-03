@@ -1,9 +1,8 @@
 # Features
 - Replace broken items in your hotbar with a spare from your inventory
-- Shows the total amount in all storages of an item when you hover over it
+- Show the total amount of an item across all storages on hover
 
 # Default Raft Features
-- Z sorts your inventory
 - right click takes 1 item
 - middle click splits stack in half
 - scrollwheel changes amount
@@ -11,10 +10,12 @@
 # TODO
 - move multiple items by holding shift and moving over items?
 - Sort inventory on middle click? 
+- Z sorts your inventory (currently inventory sorting adds this feature)
 - Auto craft broken items if you have the resources?
 - refill food items?
 - hold Q with drag and drop items on over
 - ctrl + q drop all items of same type
+- click on research item to put in required research item
 
 # Ideas
 probably belongs in another mod

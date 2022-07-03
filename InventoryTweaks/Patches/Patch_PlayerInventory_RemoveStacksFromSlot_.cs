@@ -14,6 +14,7 @@ namespace thmsn.InventoryTweaks.Patches
     [HarmonyPatch(typeof(PlayerInventory), "RemoveStacksFromSlot", typeof(Slot), typeof(int))]
     class Patch_PlayerInventory_RemoveStacksFromSlot
     {
+        // TODO: there seems to be an issue on death with duplication, either that, or when picking up really broken items.
 
         static void Prefix(PlayerInventory __instance, Slot slot, int stacksToRemove, out HotBarSlotAndItemInstance __state)
         {
