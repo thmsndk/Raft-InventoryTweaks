@@ -73,3 +73,16 @@ StyleCopReport.xml
 *.[Cc]ache
 # but keep track of directories ending in .cache
 !?*.[Cc]ache/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+##
+## Visual Studio Code
+##
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

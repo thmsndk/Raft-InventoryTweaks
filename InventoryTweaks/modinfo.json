@@ -1,7 +1,7 @@
 {
   "name": "InventoryTweaks",
-  "author": "thmsn",
-  "description": "Replace broken items in your hotbar with a spare from your inventory",
+  "author": "thmsn & kohanis",
+  "description": "Replenish used items in your hotbar from your inventory and more",
   "version": "1.1.0",
   "license": "GNU AGPLv3",
   "icon": "icon.png",
