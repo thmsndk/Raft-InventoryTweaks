@@ -48,12 +48,14 @@ namespace thmsn.InventoryTweaks.Patches
             for (; index < end; index++)
             {
                 var iterSlot = allSlots[index];
-                var iterItem = iterSlot.itemInstance;
 
                 if (firstEmptySlot == null && iterSlot.IsEmpty)
+                {
                     firstEmptySlot = iterSlot;
+                    continue;
+                }
 
-                if (iterItem?.UniqueIndex == uniqueIndex && !iterSlot.StackIsFull())
+                if (iterSlot.itemInstance?.UniqueIndex == uniqueIndex && !iterSlot.StackIsFull())
                     PatchHelpers.PlayerInventory_StackSlots(inventory, new object[]
                     {
                         slot, iterSlot, item.Amount

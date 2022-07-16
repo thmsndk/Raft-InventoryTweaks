@@ -35,10 +35,12 @@ namespace thmsn.InventoryTweaks.Patches
             if (inventory is null)
                 return;
 
-            foreach (var localSlot in inventory.allSlots)
+            var allSlots = inventory.allSlots;
+            for (int index = inventory.hotslotCount, count = allSlots.Count; index < count; index++)
             {
-                // last condition will never be triggered with second, but let it be
-                if (localSlot.IsEmpty || localSlot.slotType == SlotType.Hotbar || localSlot == slot)
+                var localSlot = allSlots[index];
+
+                if (localSlot.IsEmpty)
                     continue;
 
                 var slotItemInstance = localSlot.itemInstance;

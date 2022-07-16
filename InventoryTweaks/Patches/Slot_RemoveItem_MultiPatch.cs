@@ -44,10 +44,10 @@ namespace thmsn.InventoryTweaks.Patches
                 if (codeInstruction.Calls(Slot_RemoveItem_MethodInfo))
                 {
                     // RemoveItemReplacement(slot, amount, this/null);
-                    if (original.DeclaringType == typeof(PlayerInventory))
-                        yield return new CodeInstruction(OpCodes.Ldarg_0);
-                    else
-                        yield return new CodeInstruction(OpCodes.Ldnull);
+                    yield return new CodeInstruction(
+                        original.DeclaringType == typeof(PlayerInventory)
+                            ? OpCodes.Ldarg_0
+                            : OpCodes.Ldnull);
                     yield return RemoveItemReplacementInstruction;
                 }
                 else
